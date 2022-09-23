@@ -46,7 +46,7 @@ if(mail){
     from:"valanrains@gmail.com",
     to:`${mail.email}`,
     subject:"Reseting the password",
-    text:`https://cheerful-chebakia-f18db7.netlify.app/reset?code=${token}`
+    text:`https://632de512e811f73565e4bc3f--cheerful-chebakia-f18db7.netlify.app/reset?code=${token}`
    }
     sender.sendMail(composeEmail,(err)=>{
         if(err){
