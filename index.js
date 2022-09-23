@@ -12,7 +12,7 @@ const app =express();
 app.use(express.json());
 
 app.use(cors({
-    origin:"https://cheerful-chebakia-f18db7.netlify.app"
+    origin:"https://632de512e811f73565e4bc3f--cheerful-chebakia-f18db7.netlify.app/"
 }))
 
 app.post("/verify-email", async function(req,res){
