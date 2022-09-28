@@ -12,7 +12,7 @@ const app =express();
 app.use(express.json());
 
 app.use(cors({
-    origin:"https://632de512e811f73565e4bc3f--cheerful-chebakia-f18db7.netlify.app"
+    origin:"https://gregarious-cajeta-ee93ee.netlify.app"
 }))
 
 app.post("/verify-email", async function(req,res){
@@ -35,7 +35,7 @@ if(mail){
   
     auth: {
        user: "valanrains@gmail.com",
-       pass: "qulnnubggysqneon"
+       pass: `${process.env.MLC}`
     },
     debug: false,
     logger: true
@@ -46,7 +46,7 @@ if(mail){
     from:"valanrains@gmail.com",
     to:`${mail.email}`,
     subject:"Reseting the password",
-    text:`https://632de512e811f73565e4bc3f--cheerful-chebakia-f18db7.netlify.app/reset?code=${token}`
+    text:`https://gregarious-cajeta-ee93ee.netlify.app/reset?code=${token}`
    }
     sender.sendMail(composeEmail,(err)=>{
         if(err){
